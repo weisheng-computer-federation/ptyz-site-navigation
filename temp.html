@@ -12,53 +12,53 @@
 <body>
 <!-- <body oncontextmenu=self.event.returnValue=false onselectstart="return false"> -->
 
-    <h1 class="biaoti">福建省莆田第一中学</h1>
-    <h2 class="biaoti">PUTIAN NO.1 SCHOOL OF FUJIAN PROVINCE</h2>
+    <h1 id="biaoti1">福建省莆田第一中学</h1>
+    <h2 id="biaoti2">PUTIAN NO.1 SCHOOL OF FUJIAN PROVINCE</h2>
 
     <div class="search">
         <div>
-            <img src="png/Bing.png" class="search_engine1">
-            <img src="png/Baidu.png" class="search_engine2">
+            <img class="search_engine1" id="search_fir" src="png/Bing.png" onclick="Change()">
+            <img class="search_engine2" id="search_sec" src="png/Baidu.png" onclick="Change()">
         </div>
         <div class="search_contral">
-            <div><input type="search" class="search_text" placeholder="Please enter the search content"></div>
-            <div><img src="png/Search.png" alt="search" class="search_png"></div>
+            <div><input type="search" id="search_text" title="输入关键词" placeholder="Please enter the search content" onkeypress="Check()"></div>
+            <div><img src="png/Search.png" alt="search" id="search_png" title="搜索" onclick="Search()"></div>
         </div>
     </div>
 
     <div class="comweb">
         <div class="comweb_floor1">
-            <div onclick="Function1 ()">
+            <div onclick="Function1()">
                 <img src="png/省安全教育平台.png" alt="省安全教育平台" class="comweb_png">
                 <p class="comweb_p">省安全教育平台</p>
             </div>
-            <div onclick="Function2 ()">
+            <div onclick="Function2()">
                 <img src="png/习网.png" alt="习网" class="comweb_png">
                 <p class="comweb_p">习网</p>
             </div>
-            <div onclick="Function3 ()">
+            <div onclick="Function3()">
                 <img src="png/QQ邮箱.png" alt="QQ邮箱" class="comweb_png">
                 <p class="comweb_p">QQ邮箱</p>
             </div>
-            <div onclick="Function4 ()">
+            <div onclick="Function4()">
                 <img src="png/微笙抽号鸭.png" alt="微笙抽号鸭" class="comweb_png">
                 <p class="comweb_p">微笙抽号鸭</p>
             </div>
         </div>
         <div class="comweb_floor2">
-            <div onclick="Function5 ()">
+            <div onclick="Function5()">
                 <img src="png/哔哩哔哩.png" alt="哔哩哔哩" class="comweb_png">
                 <p class="comweb_p">哔哩哔哩</p>
             </div>
-            <div onclick="Function6 ()">
+            <div onclick="Function6()">
+                <img src="png/微信.png" alt="微信" class="comweb_png">
+                <p class="comweb_p">微信网页版</p>
+            </div>
+            <div onclick="Function7()">
                 <img src="png/待定.png" alt="待定" class="comweb_png">
                 <p class="comweb_p">待定</p>
             </div>
-            <div onclick="Function7 ()">
-                <img src="png/待定.png" alt="待定" class="comweb_png">
-                <p class="comweb_p">待定</p>
-            </div>
-            <div onclick="Function8 ()">
+            <div onclick="Function8()">
                <img src="png/待定.png" alt="待定" class="comweb_png">
                 <p class="comweb_p">待定</p>
             </div>
