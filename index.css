@@ -9,7 +9,7 @@ body {
     padding: 0;
 }
 
-#biaoti1 {
+#title1 {
     margin-bottom: 0px;
     text-align: center;
     white-space:nowrap;
@@ -18,7 +18,7 @@ body {
     font-size: 3em;
 }
 
-#biaoti2 {
+#title2 {
     margin-top: 5px;
     text-align: center;
     white-space:nowrap;
@@ -30,34 +30,32 @@ body {
 
 .search {
     margin: 80px auto;
-    width: 800px;
+    width: 700px;
 }
 
-.search_engine1 {
+.search_engine {
+    transition-duration: 1s;
     background-color: #FFFFFF;
     box-shadow: 0 0 7px 1px #00000054;
-    margin-left: 50px;
     margin-bottom: 0;
     border-radius: 20px;
-    padding: 0 15px;
     width: 60px;
     height: 20px;
 }
 
-.search_engine2 {
-    background-color: #FFFFFF;
-    box-shadow: 0 0 5px 1px #00000054;
+#search_fir {
+    padding: 0 15px;
+}
+
+#search_sec {
     margin-left: 5px;
-    margin-bottom: 0;
-    border-radius: 20px;
-    width: 60px;
-    height: 20px;
+    padding: 0;
 }
 
 .search_contral {
     background-color: #FFFFFF;
     border-radius: 5px;
-    margin: 0 50px;
+    margin: 0;
     width: 700px;
     height: 50px;
     box-shadow: 0 0 7px 1px #00000054;
@@ -114,6 +112,7 @@ input:focus .search_contral{
 }
 
 .comweb_floor2>div:hover {
+    border-radius: 5px;
     background-color: rgba(145, 145, 145, 0.15);
 }
 
