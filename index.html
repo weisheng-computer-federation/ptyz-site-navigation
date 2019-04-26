@@ -4,9 +4,9 @@
 <head>
     <title>莆田第一中学</title>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="png/favicon.png" />
+    <link rel="shortcut icon" href="images/favicon.png" />
     <link rel="stylesheet" type="text/css" href="index.css">
-    <script type="text/javascript" src="Jquery.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.js"></script>
     <script type="text/javascript" src="index.js"></script>
 </head>
 
@@ -18,53 +18,61 @@
 
     <div class="search">
         <div>
-            <img class="search_engine" id="search_fir" src="png/Bing.png" onclick="Change(1)">
-            <img class="search_engine" id="search_sec" src="png/Baidu.png" onclick="Change(2)">
+            <img class="search_engine" id="search_fir" src="images/Bing.png" onclick="Change(1)">
+            <img class="search_engine" id="search_sec" src="images/Baidu.png" onclick="Change(2)">
         </div>
         <div class="search_contral">
             <div><input type="search" id="search_text" title="输入关键词" placeholder="Please enter the search content" onkeypress="Check()"></div>
-            <div><img src="png/Search.png" alt="search" id="search_png" title="搜索" onclick="Search()"></div>
+            <div><img src="images/Search.png" alt="search" id="search_png" title="搜索" onclick="Search()"></div>
         </div>
     </div>
 
     <div class="comweb">
         <div class="comweb_floor1">
             <div onclick="window.location.href='https://putian.xueanquan.com/'">
-                <img src="png/省安全教育平台.png" alt="省安全教育平台" class="comweb_png">
+                <img src="images/省安全教育平台.png" alt="省安全教育平台" class="comweb_png">
                 <p class="comweb_p">省安全教育平台</p>
             </div>
             <div onclick="window.location.href='https://ciwong.com/index.html'">
-                <img src="png/习网.png" alt="习网" class="comweb_png">
+                <img src="images/习网.png" alt="习网" class="comweb_png">
                 <p class="comweb_p">习网</p>
             </div>
             <div onclick="window.location.href='https://mail.qq.com/'">
-                <img src="png/QQ邮箱.png" alt="QQ邮箱" class="comweb_png">
+                <img src="images/QQ邮箱.png" alt="QQ邮箱" class="comweb_png">
                 <p class="comweb_p">QQ邮箱</p>
             </div>
             <div onclick="window.location.href='https://www.weisheng.cf/games/RandQAQ/'">
-                <img src="png/微笙抽号鸭.png" alt="微笙抽号鸭" class="comweb_png">
+                <img src="images/微笙抽号鸭.png" alt="微笙抽号鸭" class="comweb_png">
                 <p class="comweb_p">微笙抽号鸭</p>
             </div>
         </div>
         <div class="comweb_floor2">
             <div onclick="window.location.href='https://www.bilibili.com/'">
-                <img src="png/哔哩哔哩.png" alt="哔哩哔哩" class="comweb_png">
+                <img src="images/哔哩哔哩.png" alt="哔哩哔哩" class="comweb_png">
                 <p class="comweb_p">哔哩哔哩</p>
             </div>
             <div onclick="window.location.href='https://wx.qq.com/'">
-                <img src="png/微信.png" alt="微信" class="comweb_png">
+                <img src="images/微信.png" alt="微信" class="comweb_png">
                 <p class="comweb_p">微信网页版</p>
             </div>
             <div onclick="window.location.href=''">
-                <img src="png/待定.png" alt="待定" class="comweb_png">
+                <img src="images/待定.png" alt="待定" class="comweb_png">
                 <p class="comweb_p">待定</p>
             </div>
             <div onclick="window.location.href=''">
-                <img src="png/待定.png" alt="待定" class="comweb_png">
+                <img src="images/待定.png" alt="待定" class="comweb_png">
                 <p class="comweb_p">待定</p>
             </div>
         </div>
     </div>
+
+    <div id="Unknown">
+        <div class="Unknown_div" id="Unknown_1"></div>
+        <div id="Blank"></div>
+        <div class="Unknown_div" id="Unknown_2"></div>
+    </div>
+
+    <!-- <div id="footer">©微笙无上计算机协会</div> -->
 </body>
 
 </html>

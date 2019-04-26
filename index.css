@@ -1,8 +1,8 @@
 body {
     background-color: #F0F0F0;
-    background: url(png/Bg.png);
+    background: url(images/Bg.jpg);
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-repeat: x-repeat;
     background-position: top center;
     background-size: auto 120%;
     margin: 0;
@@ -13,7 +13,7 @@ body {
     margin-bottom: 0px;
     text-align: center;
     white-space:nowrap;
-    color: #F8F8F8;
+    color: #FbFbFb;
     text-shadow: 1px 1px 6px #000;
     font-size: 3em;
 }
@@ -22,7 +22,7 @@ body {
     margin-top: 5px;
     text-align: center;
     white-space:nowrap;
-    color: #F8F8F8;
+    color: #FbFbFb;
     text-shadow: 1px 1px 4px #000;
     font-size: 1em;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -34,13 +34,19 @@ body {
 }
 
 .search_engine {
-    transition-duration: 1s;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
     background-color: #FFFFFF;
-    box-shadow: 0 0 7px 1px #00000054;
+    box-shadow: 0 0 5px 1px #00000054;
     margin-bottom: 0;
     border-radius: 20px;
     width: 60px;
     height: 20px;
+}
+
+.search_engine:hover {
+    background-color: #e7e7e7;
+    opacity: 0.8;
 }
 
 #search_fir {
@@ -53,16 +59,17 @@ body {
 }
 
 .search_contral {
-    background-color: #FFFFFF;
     border-radius: 5px;
     margin: 0;
     width: 700px;
     height: 50px;
-    box-shadow: 0 0 7px 1px #00000054;
+    transition-duration: 0.5s;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 2px 1px #00000054;
 }
 
-input:focus .search_contral{
-    box-shadow: 0 0 10000000px 2px #000000;
+.search_contral:hover {
+    box-shadow: 0 0 3px 3px #0000001c;
 }
 
 .search_contral>div {
@@ -92,14 +99,12 @@ input:focus .search_contral{
     padding-left: 100px;
     padding-right: 100px;
     box-shadow: 0 0 8px 1px #0000004a;
-}
-
-.comweb{
     transition-duration: 0.5s;
 }
 
 .comweb div {
-    transition-duration: 1s;
+    transition-duration: 0.8s;
+    transition-timing-function: ease;
 }
 
 .comweb:hover {
@@ -146,4 +151,43 @@ div.comweb_floor2 {
     margin-top: -8px;
     font-size: 14px;
     text-align: center;
+}
+
+#Unknown {
+    width: 800px;
+    height: 350px;
+    margin: 50px auto;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 8px 1px #0000004a;
+}
+
+.Unknown_div {
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin: 25px 37.5px;
+    border-radius: 8px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    background-color: rgba(236, 236, 236, 0.21);
+    box-shadow: 0 0 0px 0.3px rgba(0, 0, 0, 0.5);
+}
+
+.Unknown_div:hover {
+    box-shadow: 0 0 7px 0px rgba(0, 0, 0, 0.23);
+}
+
+#Blank {
+    float: left;
+    width: 50px;
+    height: 350px;
+}
+
+#footer {
+    position:absolute;
+    margin: 0;
+    right: 10px;
+    bottom: 5px;
+    font-size: 80%;
 }
