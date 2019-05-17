@@ -8,13 +8,12 @@ body, html{
 }
 body{
     background-color: rgb(240, 240, 240);
-    background: url(https://source.unsplash.com/random/1920x1080);
+    background: url(https://source.unsplash.com/random/960x540);
     background-attachment: fixed;
     background-position: center;
     background-size: 100% auto;
     margin: 0;
     padding: 0;
-    /* text-shadow: 0 0 black; */
 }
 
 #title1 {
@@ -28,8 +27,8 @@ body{
     font-size: 3em;
 }
 #title1>img{
-    height: 1em;
-    width: 1em;
+    height: 1.5em;
+    width: 1.5em;
     padding: 0 0.2em;
 }
 
@@ -186,8 +185,15 @@ iframe{
     margin: 0;
     color: rgba(255, 255, 255, 0.81);
     font-size: 17px;
-    padding: 20px;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.37);
     text-align: center;
     width: 100%;
+}
+#footer>p{
+    margin: 5px;
+    font-size: 17px;
+}
+#fir:hover{
+    cursor: pointer;
 }
