@@ -81,29 +81,31 @@
     </div>
     <div id="comment" class="maindiv">
         <h4>留言板</h4>
-        <div id="lv-container" data-id="city" data-uid="MTAyMC80NDI5MS8yMDgyMw=="></div>
+        <div id="lv-container" data-id="city" data-uid="MTAyMC80NDI5MS8yMDgyMw==">
+            <script>
+                setTimeout(() => {
+                    console.log('faqqq!')
+                    (function (d, s) {
+                        var j, e = d.getElementsByTagName(s)[0];
+
+                        if (typeof LivereTower === 'function') {
+                            return;
+                        }
+
+                        j = d.createElement(s);
+                        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                        j.async = true;
+
+                        e.parentNode.insertBefore(j, e);
+                    })(document, 'script');
+                }, 1500)
+            </script>
+        </div>
     </div>
     <div id="footer">
         <p id="fir" onclick="window.location.href='https://www.weisheng.cf/'">©微笙无上计算机协会</p>
         <p>Developed by Beautyyu & Leon</p>
     </div>
-    <script>
-        setTimeout(() => {
-            (function (d, s) {
-                var j, e = d.getElementsByTagName(s)[0];
-
-                if (typeof LivereTower === 'function') {
-                    return;
-                }
-
-                j = d.createElement(s);
-                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                j.async = true;
-
-                e.parentNode.insertBefore(j, e);
-            })(document, 'script');
-        }, 1500)
-    </script>
 </body>
 
 </html>
