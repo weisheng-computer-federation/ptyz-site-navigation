@@ -85,19 +85,20 @@
             <script>
                 setTimeout(() => {
                     console.log('faqqq!');
-                    (function (d, s) {
-                        var j, e = d.getElementsByTagName(s)[0];
 
-                        if (typeof LivereTower === 'function') {
-                            return;
-                        }
+                    let d = document,
+                        s = 'script'
+                    var j, e = d.getElementsByTagName(s)[0];
 
-                        j = d.createElement(s);
-                        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                        j.async = true;
+                    if (typeof LivereTower === 'function') {
+                        return;
+                    }
 
-                        e.parentNode.insertBefore(j, e);
-                    })(document, 'script');
+                    j = d.createElement(s);
+                    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                    j.async = true;
+
+                    e.parentNode.insertBefore(j, e);
                 }, 2500)
             </script>
         </div>
