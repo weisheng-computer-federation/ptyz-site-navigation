@@ -32,8 +32,19 @@ body{
     padding: 0 0.2em;
 }
 
-#title2>a{
+#title1>a{
     color: #FbFbFb;
+}
+#title2{
+    user-select: none;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    white-space: nowrap;
+    color: #ffffffeb;
+    text-shadow: 1px 1px 10px #4e4e4e;
+    font-size: 1.7em;
+    font-weight: 100;
 }
 
 .search {
