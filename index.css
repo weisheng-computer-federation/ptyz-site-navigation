@@ -15,7 +15,17 @@ body{
     margin: 0;
     padding: 0;
 }
-
+#alarm{
+    font-size: 130px;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: 0;
+    margin: 10px;
+    text-align: center;
+    color: #000000a6;
+    text-shadow: 0 0 10px #ffffffb5;
+}
 #title1 {
     user-select: none;
     margin-top: 110px;
