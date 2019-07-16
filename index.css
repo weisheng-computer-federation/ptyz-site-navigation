@@ -23,8 +23,8 @@ body{
     top: 0;
     margin: 10px;
     text-align: center;
-    color: #000000a6;
-    text-shadow: 0 0 10px #ffffffb5;
+    color: rgba(0, 0, 0, 0.65);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 #title1 {
     user-select: none;
