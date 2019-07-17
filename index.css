@@ -16,7 +16,17 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-
+#alarm{
+    font-size: 130px;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: 0;
+    margin: 10px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.65);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
 #title1 {
     user-select: none;
     margin-top: 110px;
@@ -35,6 +45,17 @@ body {
 
 #title2 > a {
     color: #fbfbfb;
+}
+#title2{
+    user-select: none;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.92);
+    text-shadow: 1px 1px 10px #4e4e4e;
+    font-size: 1.7em;
+    font-weight: 100;
 }
 
 .style_toggle {
