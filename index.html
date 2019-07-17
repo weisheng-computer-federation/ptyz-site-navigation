@@ -5,18 +5,31 @@
         <meta charset="utf-8" />
         <link rel="shortcut icon" href="images/favicon.png" />
         <link rel="stylesheet" type="text/css" href="index.css" />
-        <link id="sty" rel="stylesheet" type="text/css" href="sty_edge.css" />
+        <link id="sty" rel="stylesheet" type="text/css" href="sty_default.css" />
         <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="index.js"></script>
     </head>
 
     <body>
-            <div class="style_toggle">
-                    <button id="style_toggle_btn">&#926;</button>
-                </div>
+        <div class="style_toggle">
+            <button id="style_toggle_btn" onclick="StyleToggleMenu()"></button>
+        </div>
+        <div class="style_toggle_menu" style="display: none">
+            <p id="style_toggle_header">选择布局</p>
+            <div class="style_toggle_item" onclick="StyleToggle('default',this)" style="background-color:rgba(0,120,215,.12);">
+                <img src="images/favicon.png">
+                <span>默认风格</span>
+            </div>
+            <div class="style_toggle_item" onclick="StyleToggle('edge',this)">
+                <svg role="img" viewbox="0 0 40 40">
+                    <path opacity=".85" fill="#000" d="M 14 30.94 v -28.14 l -8 -2.8 v 35.54 l 8 4.46 l 20 -11.5 v -9.1 Z"></path>
+                    <path opacity=".75" fill="#000" d="M 25.28 24.43 l 8.72 -5.03 l -17.74 -6.2 l 3.47 8.65 l 5.55 2.58 Z"></path>
+                </svg>
+                <span>Edge风格</span>
+            </div>
+        </div>
 
         <h1 id="title1">微笙计协<img src="images/favicon.png" />网址导航</h1>
-
 
         <div class="search">
             <div>
