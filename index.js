@@ -17,15 +17,26 @@ function Change(x) {
 function StyleToggleMenu() {
     let el = $(".style_toggle_menu");
     el.slideToggle();
+    event.stopPropagation();
 }
 
 function StyleToggle(sty, el) {
     $(".style_toggle_item").css("background-color", "rgba(0,0,0,0)");
     $(el).css("background-color", "rgba(0,120,215,.12)");
     $("#sty").attr("href", "sty_" + sty + ".css");
+    event.stopPropagation();
 }
 
 window.onload = function() {
+    $(".style_toggle_menu").click(function(e) {
+        e.stopPropagation();
+    });
+
+    $(document).click(function(e) {
+        let el = $(".style_toggle_menu");
+        el.slideUp();
+    });
+
     let bkgurl = "https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN";
-    $("body").css("background-image", "url("+bkgurl+")");
+    $("body").css("background-image", "url(" + bkgurl + ")");
 };
