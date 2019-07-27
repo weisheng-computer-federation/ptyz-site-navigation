@@ -16,7 +16,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-#alarm{
+#alarm {
     font-size: 130px;
     position: absolute;
     z-index: -1;
@@ -24,7 +24,7 @@ body {
     top: 0;
     margin: 10px;
     text-align: center;
-    color: rgba(0, 0, 0, 0.65);
+    color: rgba(255, 255, 255, 0.65);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 #title1 {
@@ -43,10 +43,8 @@ body {
     padding: 0 0.2em;
 }
 
-#title2 > a {
-    color: #fbfbfb;
-}
-#title2{
+
+#title2 {
     user-select: none;
     margin-top: 10px;
     margin-bottom: 0px;
@@ -56,6 +54,16 @@ body {
     text-shadow: 1px 1px 10px #4e4e4e;
     font-size: 1.7em;
     font-weight: 100;
+}
+
+#title1 > a,
+#title1 > a:hover,
+#title1 > a:focus,
+#title1 > a:active,
+#title1 > a:visited {
+    color: #fbfbfb;
+    outline: none;
+    text-decoration: none;
 }
 
 .style_toggle {
@@ -105,11 +113,11 @@ body {
     box-shadow: 0 1.28rem 2.28rem rgba(0, 0, 0, 0.22), 0 0.24rem 0.72rem rgba(0, 0, 0, 0.18);
 }
 
-#style_toggle_header{
+#style_toggle_header {
     display: inline-block;
     height: 1rem;
     padding: 0rem 1rem;
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 1rem;
 }
 
@@ -117,28 +125,28 @@ body {
     display: flex;
     flex-direction: row;
     height: 1.8rem;
-    padding: .8rem 1rem;
+    padding: 0.8rem 1rem;
     align-content: center;
 }
 
 .style_toggle_item:hover {
-    background-color: rgba(0,0,0,.08);
+    background-color: rgba(0, 0, 0, 0.08);
 }
 
 .style_toggle_item:active {
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-.style_toggle_item span{
-    padding-left: .8rem;
+.style_toggle_item span {
+    padding-left: 0.8rem;
     align-content: center;
     line-height: 1.8rem;
 }
 
-.style_toggle_item img,.style_toggle_item svg{
+.style_toggle_item img,
+.style_toggle_item svg {
     display: inline-block;
     width: 1.8rem;
     height: 1.8rem;
     justify-content: center;
 }
-

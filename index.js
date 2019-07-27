@@ -27,5 +27,14 @@ function StyleToggle(sty, el) {
 
 window.onload = function() {
     let bkgurl = "https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN";
-    $("body").css("background-image", "url("+bkgurl+")");
+    $("body").css("background-image", "url(" + bkgurl + ")");
 };
+
+
+$(document).bind("click",function(e){
+    let el  = $(e.target);
+    if(el[0] != $("#style_toggle_btn")[0]){
+        if(el[0].parentElement)
+        $(".style_toggle_menu").slideUp();
+    }
+});
