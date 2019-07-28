@@ -151,3 +151,17 @@ body {
     height: 1.8rem;
     justify-content: center;
 }
+
+#bing {
+    background-image: url('images/Bing.png');
+    background-position: center;
+    background-size: 60px 20px;
+    background-repeat: no-repeat;
+}
+
+#baidu {
+    background-image: url('images/Baidu.png');
+    background-position: center;
+    background-size: 60px 20px;
+    background-repeat: no-repeat;
+}
