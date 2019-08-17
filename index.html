@@ -1,115 +1,118 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>网址导航</title>
-        <meta charset="utf-8" />
-        <link rel="shortcut icon" href="images/favicon.png" />
-        <link rel="stylesheet" type="text/css" href="index.css" />
-        <link id="sty" rel="stylesheet" type="text/css" href="sty_default.css" />
-        <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="index.js"></script>
-    </head>
 
-    <body>
-        <div class="style_toggle">
-            <button id="style_toggle_btn" onclick="StyleToggleMenu()"></button>
-        </div>
-        <div class="style_toggle_menu" style="display: none">
-            <p id="style_toggle_header">选择布局</p>
-            <div class="style_toggle_item" onclick="StyleToggle('default',this)" style="background-color:rgba(0,120,215,.12);">
-                <img src="images/favicon.png" />
-                <span>默认风格</span>
-            </div>
-            <div class="style_toggle_item" onclick="StyleToggle('edge',this)">
-                <svg role="img" viewbox="0 0 40 40">
-                    <path opacity=".85" fill="#000" d="M 14 30.94 v -28.14 l -8 -2.8 v 35.54 l 8 4.46 l 20 -11.5 v -9.1 Z"></path>
-                    <path opacity=".75" fill="#000" d="M 25.28 24.43 l 8.72 -5.03 l -17.74 -6.2 l 3.47 8.65 l 5.55 2.58 Z"></path>
-                </svg>
-                <span>Edge风格</span>
-            </div>
-        </div>
+<head>
+    <title>网址导航</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link id="sty" rel="stylesheet" type="text/css" href="sty_default.css" />
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
 
-        <p id="alarm">test</p>
-        <script>
-            let al = new Date("2020/6/7 9:00");
-            let be = al - Date.now();
-            $("#alarm").html("距2020年高考</br>仅剩" + Math.floor(be / (24 * 60 * 60 * 1000)) + "天");
-        </script>
+<body>
+    <div class="style_toggle">
+        <button id="style_toggle_btn" onclick="StyleToggleMenu()"></button>
+    </div>
+    <div class="style_toggle_menu" style="display: none">
+        <p id="style_toggle_header">选择布局</p>
+        <div id="style_toggle_item_default" class="style_toggle_item" onclick="StyleToggle('default',this)">
+            <img src="images/favicon.png" />
+            <span>默认风格</span>
+        </div>
+        <div id="style_toggle_item_edge" class=" style_toggle_item" onclick="StyleToggle('edge',this)">
+            <svg role="img" viewbox="0 0 40 40">
+                <path opacity=".85" fill="#000" d="M 14 30.94 v -28.14 l -8 -2.8 v 35.54 l 8 4.46 l 20 -11.5 v -9.1 Z">
+                </path>
+                <path opacity=".75" fill="#000" d="M 25.28 24.43 l 8.72 -5.03 l -17.74 -6.2 l 3.47 8.65 l 5.55 2.58 Z">
+                </path>
+            </svg>
+            <span>Edge风格</span>
+        </div>
+    </div>
 
-        <h1 id="title1"><a href="https://www.weisheng.cf/">微笙计协</a><img src="images/favicon.png" />网址导航</h1>
-        <h2 id="title2">做莆一特色的网址导航</h2>
+    <p id="alarm">test</p>
+    <script>
+        let al = new Date("2020/6/7 9:00");
+        let be = al - Date.now();
+        $("#alarm").html("距2020年高考</br>仅剩" + Math.floor(be / (24 * 60 * 60 * 1000)) + "天");
+    </script>
 
-        <div class="search">
-            <div>
-                <div class="search_engine fir" id="bing" onclick="Change('#bing')"></div>
-                <div class="search_engine" id="baidu" onclick="Change('#baidu')"></div>
-            </div>
-            <div class="search_contral">
-                <input type="search" id="search_text" title="输入关键词" placeholder="输入搜索内容" onkeypress="Check()" />
-                <img src="images/Search.png" alt="search" id="search_png" title="搜索" onclick="Search()" />
-            </div>
-        </div>
+    <h1 id="title1"><a href="https://www.weisheng.cf/">微笙计协</a><img src="images/favicon.png" />网址导航</h1>
+    <h2 id="title2">做莆一特色的网址导航</h2>
 
-        <div class="comweb">
-            <div onclick="window.location.href='https://putian.xueanquan.com/'">
-                <img src="images/省安全教育平台.png" alt="省安全教育平台" class="comweb_png" />
-                <p class="comweb_p">省安全教育平台</p>
-            </div>
-            <div onclick="window.location.href='http://www.banyuetan.org/'">
-                <img src="images/半月谈.png" alt="半月谈" class="comweb_png" />
-                <p class="comweb_p">半月谈</p>
-            </div>
-            <div onclick="window.location.href='http://tv.cctv.com/lm/xwzk/'">
-                <img src="images/新闻周刊.png" alt="新闻周刊" class="comweb_png" />
-                <p class="comweb_p">新闻周刊</p>
-            </div>
-            <div onclick="window.location.href='https://post.weisheng.cf/'">
-                <img src="images/微笙文章站.png" alt="微笙文章站" class="comweb_png" />
-                <p class="comweb_p">微笙文章站</p>
-            </div>
-            <div onclick="window.location.href='https://wx.qq.com/'">
-                <img src="images/微信.png" alt="微信" class="comweb_png" />
-                <p class="comweb_p">微信网页版</p>
-            </div>
-            <div onclick="window.location.href='https://pan.baidu.com/'">
-                <img src="images/百度网盘.png" alt="百度网盘" class="comweb_png" />
-                <p class="comweb_p">百度网盘</p>
-            </div>
-            <div onclick="window.location.href='https://mail.163.com/'">
-                <img src="images/网易邮箱.png" alt="网易邮箱" class="comweb_png" />
-                <p class="comweb_p">网易邮箱</p>
-            </div>
-            <div onclick="window.location.href='https://mail.qq.com/'">
-                <img src="images/QQ邮箱.png" alt="QQ邮箱" class="comweb_png" />
-                <p class="comweb_p">QQ邮箱</p>
-            </div>
-            <div onclick="window.location.href='https://weisheng-computer-federation.github.io/randQAQ/'">
-                <img src="images/微笙抽号鸭.png" alt="微笙抽号鸭" class="comweb_png" />
-                <p class="comweb_p">微笙抽号鸭</p>
-            </div>
-            <div onclick="window.location.href='https://weibo.com/'">
-                <img src="images/微博.png" alt="微博" class="comweb_png" />
-                <p class="comweb_p">微博</p>
-            </div>
-            <div onclick="window.location.href='https://sports.qq.com/nba/'">
-                <img src="images/NBA.png" alt="腾讯NBA" class="comweb_png" />
-                <p class="comweb_p">腾讯NBA</p>
-            </div>
-            <div onclick="window.location.href='https://www.bilibili.com/'">
-                <img src="images/哔哩哔哩.png" alt="哔哩哔哩" class="comweb_png" />
-                <p class="comweb_p">哔哩哔哩</p>
-            </div>
+    <div class="search">
+        <div>
+            <div class="search_engine fir" id="bing" onclick="Change('#bing')"></div>
+            <div class="search_engine" id="baidu" onclick="Change('#baidu')"></div>
         </div>
-        <div id="comment" class="maindiv">
-            <h4>留言板</h4>
-            <iframe
-                src="https://was.livere.me/comment/city?id=city&amp;refer=nav.weisheng.cf%2F&amp;uid=MTAyMC80NDE3MS8yMDcwNA%3D%3D&amp;site=https%3A%2F%2Fnav.weisheng.cf%2F&amp;title=%2525u7F51%2525u5740%2525u5BFC%2525u822A&amp;titleLength=4"
-                style="height: 2400px"
-            ></iframe>
+        <div class="search_contral">
+            <input type="search" id="search_text" title="输入关键词" placeholder="输入搜索内容" onkeypress="Check()" />
+            <img src="images/Search.png" alt="search" id="search_png" title="搜索" onclick="Search()" />
         </div>
-        <div id="footer">
-            <p id="fir" onclick="window.location.href='https://www.weisheng.cf/'">©微笙无上计算机协会</p>
-            <p>Developed by Beautyyu & Leon</p>
+    </div>
+
+    <div class="comweb">
+        <div onclick="window.location.href='https://putian.xueanquan.com/'">
+            <img src="images/省安全教育平台.png" alt="省安全教育平台" class="comweb_png" />
+            <p class="comweb_p">省安全教育平台</p>
         </div>
-    </body>
+        <div onclick="window.location.href='http://www.banyuetan.org/'">
+            <img src="images/半月谈.png" alt="半月谈" class="comweb_png" />
+            <p class="comweb_p">半月谈</p>
+        </div>
+        <div onclick="window.location.href='http://tv.cctv.com/lm/xwzk/'">
+            <img src="images/新闻周刊.png" alt="新闻周刊" class="comweb_png" />
+            <p class="comweb_p">新闻周刊</p>
+        </div>
+        <div onclick="window.location.href='https://post.weisheng.cf/'">
+            <img src="images/微笙文章站.png" alt="微笙文章站" class="comweb_png" />
+            <p class="comweb_p">微笙文章站</p>
+        </div>
+        <div onclick="window.location.href='https://wx.qq.com/'">
+            <img src="images/微信.png" alt="微信" class="comweb_png" />
+            <p class="comweb_p">微信网页版</p>
+        </div>
+        <div onclick="window.location.href='https://pan.baidu.com/'">
+            <img src="images/百度网盘.png" alt="百度网盘" class="comweb_png" />
+            <p class="comweb_p">百度网盘</p>
+        </div>
+        <div onclick="window.location.href='https://mail.163.com/'">
+            <img src="images/网易邮箱.png" alt="网易邮箱" class="comweb_png" />
+            <p class="comweb_p">网易邮箱</p>
+        </div>
+        <div onclick="window.location.href='https://mail.qq.com/'">
+            <img src="images/QQ邮箱.png" alt="QQ邮箱" class="comweb_png" />
+            <p class="comweb_p">QQ邮箱</p>
+        </div>
+        <div onclick="window.location.href='https://weisheng-computer-federation.github.io/randQAQ/'">
+            <img src="images/微笙抽号鸭.png" alt="微笙抽号鸭" class="comweb_png" />
+            <p class="comweb_p">微笙抽号鸭</p>
+        </div>
+        <div onclick="window.location.href='https://weibo.com/'">
+            <img src="images/微博.png" alt="微博" class="comweb_png" />
+            <p class="comweb_p">微博</p>
+        </div>
+        <div onclick="window.location.href='https://sports.qq.com/nba/'">
+            <img src="images/NBA.png" alt="腾讯NBA" class="comweb_png" />
+            <p class="comweb_p">腾讯NBA</p>
+        </div>
+        <div onclick="window.location.href='https://www.bilibili.com/'">
+            <img src="images/哔哩哔哩.png" alt="哔哩哔哩" class="comweb_png" />
+            <p class="comweb_p">哔哩哔哩</p>
+        </div>
+    </div>
+    <div id="comment" class="maindiv">
+        <h4>留言板</h4>
+        <iframe
+            src="https://was.livere.me/comment/city?id=city&amp;refer=nav.weisheng.cf%2F&amp;uid=MTAyMC80NDE3MS8yMDcwNA%3D%3D&amp;site=https%3A%2F%2Fnav.weisheng.cf%2F&amp;title=%2525u7F51%2525u5740%2525u5BFC%2525u822A&amp;titleLength=4"
+            style="height: 2400px"></iframe>
+    </div>
+    <div id="footer">
+        <p id="fir" onclick="window.location.href='https://www.weisheng.cf/'">©微笙无上计算机协会</p>
+        <p>Developed by Beautyyu & Leon & Median-dxz</p>
+    </div>
+</body>
+
 </html>

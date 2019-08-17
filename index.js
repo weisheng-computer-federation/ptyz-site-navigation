@@ -24,8 +24,39 @@ function StyleToggle(sty, el) {
     $(".style_toggle_item").css("background-color", "rgba(0,0,0,0)");
     $(el).css("background-color", "rgba(0,120,215,.12)");
     $("#sty").attr("href", "sty_" + sty + ".css");
-    event.stopPropagation();
+    
+    localStorage.setItem("sty", sty);
+    if (event) {
+        event.stopPropagation();
+    }
 }
+
+$(document).ready(() => {
+    let bkgurl = localStorage.getItem("bkgurl");
+    let style = localStorage.getItem("sty");
+    let date = localStorage.getItem("today");
+    let datenow = new Date().getDate();
+    
+    if (style) {
+        StyleToggle(style, document.getElementById("style_toggle_item_" + localStorage.getItem("sty")));
+    }
+
+    if (!bkgurl || !date || datenow != date) {
+        bkgurl = "https://jsonp.afeld.me/?url=https%3A%2F%2Fwww.bing.com%2FHPImageArchive.aspx%3Fformat%3Djs%26idx%3D0%26n%3D1%26mkt%3Dzh-CN";
+        fetch(bkgurl).then(function(rep) {
+            rep.json()
+                .then(function(v) {
+                    bkgurl = "https://cn.bing.com/" + v["images"][0].url;
+                    localStorage.setItem("bkgurl", bkgurl);
+                    localStorage.setItem("today", datenow);
+                    $("body").css("background-image", "url(" + bkgurl + ")")
+                });
+        });
+    } else {
+        bkgurl = localStorage.getItem("bkgurl");
+        $("body").css("background-image", "url(" + bkgurl + ")");
+    }
+});
 
 window.onload = function() {
     $(".style_toggle_menu").click(function(e) {
@@ -36,7 +67,4 @@ window.onload = function() {
         let el = $(".style_toggle_menu");
         el.slideUp();
     });
-
-    let bkgurl = "https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=zh-CN";
-    $("body").css("background-image", "url(" + bkgurl + ")");
 };
