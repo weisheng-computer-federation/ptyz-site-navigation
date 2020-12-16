@@ -2,7 +2,8 @@ var flag = 1;
 function Search() {
     var input = document.getElementById("search_text").value;
     if ($(".fir")[0].id == "bing") window.open("https://cn.bing.com/search?q=" + input, "blank");
-    else window.open("https://www.baidu.com/s?ie={inputEncoding}&wd=" + input, "blank");
+    else if($(".fir")[0].id == "baidu") window.open("https://www.baidu.com/s?ie={inputEncoding}&wd=" + input, "blank");
+    else if($(".fir")[0].id == "google") window.open("https://search.library.edu.eu.org/search?q=" + input, "blank");
 }
 
 function Check() {

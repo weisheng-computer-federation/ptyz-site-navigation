@@ -166,3 +166,10 @@ body {
     background-size: 60px 20px;
     background-repeat: no-repeat;
 }
+
+#google {
+    background-image: url('https://search.library.edu.eu.org/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png');
+    background-position: center;
+    background-size: 45px 15px;
+    background-repeat: no-repeat;
+}
