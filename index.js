@@ -1,9 +1,9 @@
 var flag = 1;
 function Search() {
     var input = document.getElementById("search_text").value;
-    if ($(".fir")[0].id == "bing") window.open("https://cn.bing.com/search?q=" + input, "blank");
-    else if($(".fir")[0].id == "baidu") window.open("https://www.baidu.com/s?ie={inputEncoding}&wd=" + input, "blank");
-    else if($(".fir")[0].id == "google") window.open("https://search.library.edu.eu.org/search?q=" + input, "blank");
+    if ($(".fir")[0].id == "bing") window.open(`https://cn.bing.com/search?q=${input}`, "blank");
+    else if($(".fir")[0].id == "baidu") window.open(`https://www.baidu.com/s?ie={inputEncoding}&wd=${input}`, "blank")
+    else if($(".fir")[0].id == "google") window.open(`https://search.library.edu.eu.org/search?q=${input}`, "blank");
 }
 
 function Check() {
@@ -13,6 +13,7 @@ function Check() {
 function Change(x) {
     $(".search_engine").attr("class", "search_engine");
     $(x).attr("class", "search_engine fir");
+    localStorage.setItem("search", x);
 }
 
 function StyleToggleMenu() {
@@ -37,6 +38,11 @@ $(document).ready(() => {
     let style = localStorage.getItem("sty");
     let date = localStorage.getItem("today");
     let datenow = new Date().getDate();
+    let search = localStorage.getItem("search");
+
+    if(search) {
+        Change(search);
+    }
     
     if (style) {
         StyleToggle(style, document.getElementById("style_toggle_item_" + localStorage.getItem("sty")));
