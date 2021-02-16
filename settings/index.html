@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>导航设置</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="../index.css" />
+    <!-- <link id="sty" rel="stylesheet" type="text/css" href="../sty_default.css" /> -->
+    <link id="sty" rel="stylesheet" type="text/css" href="settings.css" />
+    <script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="setttings.js"></script>
+</head>
+
+<body>
+    <div class="maindiv">
+        <h4 onclick="window.location.href='../index.html'">&lt;&lt;返回</h4>
+        <hr>
+        <h5>导航设置</h5>
+        <ul id="sites">
+            <!-- 动态添加 -->
+        </ul>
+        <h5>背景设置(恢复默认清除下方链接再保存即可)</h5>
+        <p>输入图片链接 :<a href="https://www.zhihu.com/question/286404834" style="font-size: 0.7em;color: gray;">如何把本地图片转为图片连接?</a></p>
+        <input id="BkgUrl" type="url" style="font-size: 1.2em;width: 28em"><input type="button" value="保存" style="border: 2px; width: unset;" onclick="SaveBackgroundUrl()">
+
+    </div>
+    
+    <div id="footer">
+        <p id="fir" onclick="window.location.href='https://www.weisheng.cf/'">©微笙无上计算机协会</p>
+        <p>Developed by Beautyyu & Leon & Median-dxz & Zerbats</p>
+    </div>
+</body>
+
+</html>

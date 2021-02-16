@@ -78,7 +78,7 @@
     display: flex;
     flex-flow: row wrap;
     align-content: space-around;
-    justify-content: center;
+    justify-content: left;
     margin: 0 auto;
     max-width: 68rem;
     border-radius: 8px;
@@ -152,6 +152,12 @@ iframe {
     font-size: 25px;
     font-weight: 500;
     margin: 10px;
+}
+
+.maindiv>h5 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 15px;
 }
 
 #footer {
